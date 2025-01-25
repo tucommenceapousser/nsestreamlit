@@ -99,7 +99,7 @@ with col1:
         download_scripts()
         st.success("Scripts mis à jour avec succès!")
 with col2:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Logo_Nmap.svg/1200px-Logo_Nmap.svg.png", width=100)
+    st.image("content://com.android.chrome.FileProvider/images/screenshot/17378106938754112865169698981780.png", width=100)
 
 # Récupérer et afficher la liste des scripts
 scripts = get_scripts()
