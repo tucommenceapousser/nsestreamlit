@@ -10,6 +10,16 @@ st.set_page_config(
     initial_sidebar_state="expanded"  # Développer la barre latérale par défaut
 )
 
+st.markdown("""
+    <head>
+        <meta property="og:title" content="Gestion des Scripts NSE - by TRHACKNON" />
+        <meta property="og:description" content="Une application pour gérer les scripts NSE pour Nmap, conçu par TRHACKNON." />
+        <meta property="og:image" content="https://miro.medium.com/v2/resize:fit:828/format:webp/1*areV8qZKYjT0dzxuL8Nifg.png" />
+        <meta property="og:url" content="https://trkn-nse.streamlit.app/" />
+        <meta name="twitter:card" content="summary_large_image">
+    </head>
+""", unsafe_allow_html=True)
+
 # Définir les styles personnalisés (fond sombre, texte fluo, éléments interactifs)
 st.markdown("""
     <style>
