@@ -1,0 +1,21 @@
+[theme]
+# Choix du thème, 'dark' ou 'light'
+base = "dark"
+
+# Couleurs principales et secondaires
+primaryColor = "#00ff00"  # Vert fluo pour l'élément principal
+backgroundColor = "#1e1e1e"  # Fond sombre
+secondaryBackgroundColor = "#121212"  # Fond secondaire
+textColor = "#00ff00"  # Texte en vert fluo
+
+# Police utilisée dans l'application
+font = "monospace"  # Polices de type monospace pour le look hacker
+
+# Option pour la gestion du layout
+[server]
+headless = true  # Pour une utilisation sans interface graphique en local
+enableCORS = false  # Désactive les CORS pour permettre les requêtes cross-origin
+
+[layout]
+# La largeur de la page
+wideMode = true
