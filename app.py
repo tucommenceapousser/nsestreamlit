@@ -99,7 +99,7 @@ with col1:
         download_scripts()
         st.success("Scripts mis à jour avec succès!")
 with col2:
-    st.image("https://medium.com/@punamyaana08/nmap-scripting-engine-nse-cdd0ff34b14b", width=100)
+    st.image("https://miro.medium.com/v2/resize:fit:828/format:webp/1*areV8qZKYjT0dzxuL8Nifg.png", width=100)
 
 # Récupérer et afficher la liste des scripts
 scripts = get_scripts()
