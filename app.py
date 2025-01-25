@@ -2,6 +2,14 @@ import streamlit as st
 import os
 import requests
 
+# Définir la configuration de la page
+st.set_page_config(
+    page_title="Gestion des Scripts NSE - TRHACKNON",  # Titre du navigateur
+    page_icon="https://miro.medium.com/v2/resize:fit:828/format:webp/1*areV8qZKYjT0dzxuL8Nifg.png",  # Icône personnalisée
+    layout="centered",  # Centrer le contenu
+    initial_sidebar_state="expanded"  # Développer la barre latérale par défaut
+)
+
 # Définir les styles personnalisés (fond sombre, texte fluo, éléments interactifs)
 st.markdown("""
     <style>
