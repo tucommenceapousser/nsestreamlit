@@ -2,6 +2,46 @@ import streamlit as st
 import os
 import requests
 
+# Définir les styles personnalisés (fond sombre, texte fluo)
+st.markdown("""
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+        }
+        .stButton button {
+            background-color: #00ff00;
+            color: #1e1e1e;
+            border: 2px solid #00ff00;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: "Courier New", monospace;
+        }
+        .stButton button:hover {
+            background-color: #00cc00;
+        }
+        .stTextArea textarea {
+            background-color: #1e1e1e;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            font-family: "Courier New", monospace;
+        }
+        .stSelectbox select {
+            background-color: #1e1e1e;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            font-family: "Courier New", monospace;
+        }
+        h1, h2, h3 {
+            color: #00ff00;
+        }
+        .stText {
+            color: #00ff00;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Définition du répertoire pour stocker les scripts
 SCRIPTS_DIR = "scripts/nse"
 GITHUB_URL = "https://raw.githubusercontent.com/tucommenceapousser/nmap-nse-scripts/master/scripts/"
@@ -28,7 +68,7 @@ def get_scripts():
     return [{"name": script, "path": f"{SCRIPTS_DIR}/{script}"} for script in os.listdir(SCRIPTS_DIR) if script.endswith(".nse")]
 
 # Streamlit UI
-st.title("Gestion des Scripts NSE")
+st.title("Gestion des Scripts NSE - Style Hacker")
 
 # Option de mise à jour des scripts
 if st.button("Mettre à jour les scripts"):
