@@ -76,6 +76,35 @@ st.markdown("""
         .logo-container img:hover {
             transform: scale(1.1);
         }
+        .about-section {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0px 0px 10px #00ff00;
+        }
+        .about-section h2 {
+            color: #00ff00;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 0px 0px 10px rgba(0,255,0,0.6);
+        }
+        .about-section p {
+            color: #00ff00;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .about-section a {
+            color: #00cc00;
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: 0px 0px 10px rgba(0,255,0,0.8);
+        }
+        .about-section a:hover {
+            color: #00ff00;
+            text-shadow: 0px 0px 15px rgba(0,255,0,0.8);
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -115,6 +144,16 @@ with col1:
         st.success("Scripts mis à jour avec succès!")
 with col2:
     st.markdown('<div class="logo-container"><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*areV8qZKYjT0dzxuL8Nifg.png" alt="Logo" /></div>', unsafe_allow_html=True)
+
+# About section
+st.markdown("""
+    <div class="about-section">
+        <h2>À propos</h2>
+        <p>Bienvenue sur la gestion des scripts NSE de TRHACKNON. Ce projet a pour but de faciliter le téléchargement et la gestion des scripts NSE pour Nmap, vous permettant d'exécuter des tests de sécurité plus efficaces.</p>
+        <p>Vous pouvez télécharger les scripts directement depuis notre dépôt GitHub et utiliser ceux qui répondent à vos besoins de sécurité.</p>
+        <p>Pour plus d'informations, visitez notre dépôt GitHub : <a href="https://github.com/tucommenceapousser/nmap-nse-scripts" target="_blank">Nmap NSE Scripts</a></p>
+    </div>
+""", unsafe_allow_html=True)
 
 # Récupérer et afficher la liste des scripts
 scripts = get_scripts()
