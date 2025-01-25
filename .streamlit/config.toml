@@ -3,19 +3,18 @@
 base = "dark"
 
 # Couleurs principales et secondaires
-primaryColor = "#00ff00"  # Vert fluo pour l'élément principal
-backgroundColor = "#1e1e1e"  # Fond sombre
-secondaryBackgroundColor = "#121212"  # Fond secondaire
-textColor = "#00ff00"  # Texte en vert fluo
+primaryColor = "#00ff00"  # Vert fluo
+backgroundColor = "#121212"  # Fond très sombre
+secondaryBackgroundColor = "#232329"  # Fond secondaire
+textColor = "#00ff00"  # Texte fluo
+
+# Personnalisation des bordures et des ombres
+borderColor = "#00ff00"  # Couleur des bordures
+shadowColor = "#00ff00"  # Ombres des éléments
 
 # Police utilisée dans l'application
-font = "monospace"  # Polices de type monospace pour le look hacker
+font = "monospace"  # Police monospace pour un style code
 
-# Option pour la gestion du layout
-[server]
-headless = true  # Pour une utilisation sans interface graphique en local
-enableCORS = false  # Désactive les CORS pour permettre les requêtes cross-origin
-
+# Largeur de la page
 [layout]
-# La largeur de la page
 wideMode = true
