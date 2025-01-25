@@ -60,12 +60,21 @@ st.markdown("""
             letter-spacing: 2px;
             text-align: center;
             text-shadow: 0px 0px 20px rgba(0,255,0,0.8);
+            margin-bottom: 20px;
         }
-        .stImage {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 20px;
+        }
+        .logo-container img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .logo-container img:hover {
+            transform: scale(1.1);
         }
     </style>
 """, unsafe_allow_html=True)
@@ -105,10 +114,7 @@ with col1:
         download_scripts()
         st.success("Scripts mis à jour avec succès!")
 with col2:
-    st.image("https://miro.medium.com/v2/resize:fit:828/format:webp/1*areV8qZKYjT0dzxuL8Nifg.png", width=150)
-
-# Espacement entre la mise à jour et la liste des scripts
-st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown('<div class="logo-container"><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*areV8qZKYjT0dzxuL8Nifg.png" alt="Logo" /></div>', unsafe_allow_html=True)
 
 # Récupérer et afficher la liste des scripts
 scripts = get_scripts()
