@@ -105,7 +105,7 @@ def about_section():
             Vous pouvez explorer les scripts, les mettre à jour, et voir leur contenu directement ici. Un outil simple et efficace pour les professionnels de la sécurité.
         </p>
         <p>
-            <a href="https://www.facebook.com/share/g/SpQ3RD4dqmVHwfFm/" style="color: #00ff00;">Rejoignez-moi sur Facebook!</a>
+            <a href="https://www.facebook.com/share/18SFLvkBT2/" style="color: #00ff00;">Rejoignez-moi sur Facebook!</a>
         </p>
     """, unsafe_allow_html=True)
 
