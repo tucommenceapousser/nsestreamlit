@@ -68,7 +68,7 @@ def get_scripts():
     return [{"name": script, "path": f"{SCRIPTS_DIR}/{script}"} for script in os.listdir(SCRIPTS_DIR) if script.endswith(".nse")]
 
 # Streamlit UI
-st.title("Gestion des Scripts NSE - Style Hacker")
+st.title("Gestion des Scripts NSE - by TRHACKNON")
 
 # Option de mise à jour des scripts
 if st.button("Mettre à jour les scripts"):
