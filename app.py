@@ -76,37 +76,30 @@ st.markdown("""
         .logo-container img:hover {
             transform: scale(1.1);
         }
-        .about-section {
-            background-color: #2a2a2a;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 30px;
-            box-shadow: 0px 0px 10px #00ff00;
-        }
-        .about-section h2 {
+        .stSidebar .stMarkdown {
             color: #00ff00;
-            text-align: center;
-            margin-bottom: 15px;
-            text-shadow: 0px 0px 10px rgba(0,255,0,0.6);
-        }
-        .about-section p {
-            color: #00ff00;
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .about-section a {
-            color: #00cc00;
-            font-weight: bold;
-            text-decoration: none;
-            text-shadow: 0px 0px 10px rgba(0,255,0,0.8);
-        }
-        .about-section a:hover {
-            color: #00ff00;
-            text-shadow: 0px 0px 15px rgba(0,255,0,0.8);
+            font-family: "Courier New", monospace;
         }
     </style>
 """, unsafe_allow_html=True)
+
+# Fonction About personnalisée dans le menu Streamlit
+def about_section():
+    st.markdown("<h2>À propos</h2>", unsafe_allow_html=True)
+    st.markdown("""
+        <p>
+            Bienvenue dans la gestion des scripts NSE! Cette application vous permet de télécharger et de gérer des scripts NSE pour Nmap, créés pour améliorer vos tests de sécurité.
+        </p>
+        <p>
+            Conçu par <strong>TRHACKNON</strong>, un passionné de cybersécurité, cet outil facilite l'intégration de scripts pour tester vos systèmes et applications. 
+        </p>
+        <p>
+            Vous pouvez explorer les scripts, les mettre à jour, et voir leur contenu directement ici. Un outil simple et efficace pour les professionnels de la sécurité.
+        </p>
+        <p>
+            <a href="https://www.facebook.com/share/g/SpQ3RD4dqmVHwfFm/" style="color: #00ff00;">Rejoignez-moi sur Facebook!</a>
+        </p>
+    """, unsafe_allow_html=True)
 
 # Définition du répertoire pour stocker les scripts
 SCRIPTS_DIR = "scripts/nse"
@@ -145,16 +138,6 @@ with col1:
 with col2:
     st.markdown('<div class="logo-container"><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*areV8qZKYjT0dzxuL8Nifg.png" alt="Logo" /></div>', unsafe_allow_html=True)
 
-# About section
-st.markdown("""
-    <div class="about-section">
-        <h2>À propos</h2>
-        <p>Bienvenue sur la gestion des scripts NSE de TRHACKNON. Ce projet a pour but de faciliter le téléchargement et la gestion des scripts NSE pour Nmap, vous permettant d'exécuter des tests de sécurité plus efficaces.</p>
-        <p>Vous pouvez télécharger les scripts directement depuis notre dépôt GitHub et utiliser ceux qui répondent à vos besoins de sécurité.</p>
-        <p>Pour plus d'informations, visitez notre dépôt GitHub : <a href="https://github.com/tucommenceapousser/nmap-nse-scripts" target="_blank">Nmap NSE Scripts</a></p>
-    </div>
-""", unsafe_allow_html=True)
-
 # Récupérer et afficher la liste des scripts
 scripts = get_scripts()
 script_names = [script["name"] for script in scripts]
@@ -171,3 +154,7 @@ if selected_script:
         
         st.subheader(f"Détails du script: {selected_script}")
         st.text_area("Contenu du script", content, height=400)
+
+# Ajouter la section About dans le menu sidebar
+with st.sidebar:
+    about_section()
